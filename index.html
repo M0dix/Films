@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Онлайн-кинотеатр</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="images/titlelogo.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- <header>
+		<div class="header_section">
+			<div class="header_item logo">
+			<a href="#"><img src="images/logo.png" width="45" height="45"></a>
+			</div>
+			
+			<div class="header_item name">
+			<a href="#">Онлайн-кинотеатр</a>	
+			</div>
+		</div>	
+		<div class="header_section">	
+			<div class="header_item button catalog">
+				<a href="#">Каталог</a>
+			</div>
+			
+			<div class="header_item button addfilm">
+				<a href="#">Добавить фильм</a>
+			</div>
+		</div>
+		<div class="header_item section">
+			<div class="header_item button auth">
+				<a onclick="openPopup()" id="user">Войти</a>
+			</div>			
+		</div>
+	</header> -->
+	<div id="header"></div>
+	<div id="films"></div>
+	<div id="filmography"></div>
+	<div id="popup" class="popup">
+		<div class="popup_content">
+			<div class="popup_header">
+				<span class="popup_header_text">Авторизация</span>
+			</div>
+			<div class="popup_body">
+			<form>
+				<p>Введите ваш ник:</p>
+				<input type="text" class="popup_text" id="popup_text_nickname">
+			</form>
+			<form>
+				<p>Введите ваш род деятельности:</p>
+				<input type="text" class="popup_text" id="popup_text_prof">
+			</form>	
+			<br>		
+			<input type="button" value="Авторизоваться" class="popup-button" onclick="authorize()">
+			</div>
+		</div>
+	</div>
+	<!-- Константы и утилиты -->
+	<script src="constants/catalog.js"></script>
+	<script src="constants/root.js"></script>
+	<script src="utils/localStorageUtil.js"></script>
+	<!-- Фильмы -->
+	<script src="films/films.js"></script>
+	<link rel="stylesheet" type="text/css" href="films/fillms.css">
+	<!-- Header -->
+	<script src="Header/Header.js"></script>
+	<link rel="stylesheet" type="text/css" href="Header/Header.css">
+	<!-- Filmography -->
+	<script src="filmography/filmography.js"></script>
+	<link rel="stylesheet" type="text/css" href="filmography/filmography.css">
+	
+
+</body>
+</html>

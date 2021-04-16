@@ -1,0 +1,160 @@
+:root {
+	--spacing-small: 10px;
+	--spacing-medium: 15px;
+	--spacing-large: 30px;
+	
+	--linear-gradient: linear-gradient(to right, #e2f87c, #d6f567, #c8f151, #b9ee38, #a8eb12);
+	--box-shadow: 
+		0 16px 24px 2px rgba(33,37,41,.02), 
+		0 6px 30px 5px rgba(33,37,41,.04), 
+		0 8px 10px -5px rgba(33,37,41,.1);
+	--border-radius: 3px;
+
+	--dollar: url(images/dollarsymbol.png);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #a1a1a1;
+	border-radius: 5px;
+} 
+
+::-webkit-scrollbar-track {
+	background-color: white;
+}
+
+a {
+	color:#fff;
+	text-decoration: none;	
+}
+
+body {
+	margin: 0;
+	min-width: 100%;
+	min-height: 100%;
+	background-color: #006699;
+}
+
+header {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	background-color: #003366;
+}
+
+.header_section {
+	display: flex;
+	align-items: center;
+}
+
+.header_item {
+	margin-bottom: 1px;
+	font-size: 25px;
+}
+
+.header_item.name {
+	font-size: 30px;
+	text-shadow: 
+		-0   -1px 1px #000000,
+		 0   -1px 1px #000000,
+		-0    1px 1px #000000,
+		 0    1px 1px #000000,
+		-1px -0   1px #000000,
+		 1px -0   1px #000000,
+		-1px  0   1px #000000,
+		 1px  0   1px #000000,
+		-1px -1px 1px #000000,
+		 1px -1px 1px #000000,
+		-1px  1px 1px #000000,
+		 1px  1px 1px #000000,
+		-1px -1px 1px #000000,
+		 1px -1px 1px #000000,
+		-1px  1px 1px #000000,
+		 1px  1px 1px #000000; 
+}
+
+.header_item.logo {
+	margin-top: 10px;
+}
+
+
+.header_item.logo, .header_item.name {
+	margin-left: 50px;
+}
+
+.header_item.button.catalog {
+	margin-right: 50px;
+}
+
+.header_item.button.auth {
+	margin-right: 30px;
+	margin-top: 15px;
+}
+
+.popup {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup_content {
+	position: relative;
+	width: 500px;
+	height: 270px;
+	background-color: #17165E;
+	border: 3px solid #000000;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 28px;
+	margin: auto;
+	padding: 0;
+	animation-name: animatetop;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes animatetop{
+	from {
+		top: -300px;
+		opacity: 0
+	}
+	to {
+		top: 30%;
+		opacity: 1
+	}
+}
+
+.popup_header {
+	color: #fff;
+	text-align: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 34px;
+	margin-bottom: 5px;
+}
+
+.popup_body {
+	color: #fff;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+	margin-left: 10px;
+}
+
+.popup-button {
+	margin-left: 175px;
+}

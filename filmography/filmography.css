@@ -1,0 +1,33 @@
+.filmography-container {
+    width: 90%;
+    height: 92vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: var(--spacing-large);
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.filmography-element__name {
+
+}
+
+.filmography-element__producer {
+
+}
+
+.filmography__close {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    right: 20px;
+    background-image: url(cancel.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+}
