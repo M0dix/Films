@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Онлайн-кинотеатр</title>
@@ -9,6 +10,7 @@
 	<script src="script.js"></script>
 	<title>Document</title>
 </head>
+
 <body>
 
 	<!-- <header>
@@ -37,6 +39,161 @@
 		</div>
 	</header> -->
 	<div id="header"></div>
+
+	<div id="film-adder" class="film-adder">
+		<div class="input-wrapper">
+
+			<form class="form-adder">
+				<label for="id">Номер:</label>
+				<input type="text" id="id" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="name">Название:</label>
+				<input type="text" id="name" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="genre">Жанр:</label>
+				<input type="text" id="genre" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="png">Постер:</label>
+				<input type="text" id="png" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="country">Страна:</label>
+				<input type="text" id="country" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="director">Режиссер:</label>
+				<input type="text" id="director" class="input-adder"/>
+			</form>
+			
+			<form class="form-adder">
+				<label for="producer">Продюсер:</label>
+				<input type="text" id="producer" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="screenwriter">Сценарист:</label>
+				<input type="text" id="screenwriter" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="operator">Оператор:</label>
+				<input type="text" id="operator" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="compositor">Композитор:</label>
+				<input type="text" id="compositor" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="budget">Бюджет:</label>
+				<input type="text" id="budget" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="tallage">Сборы:</label>
+				<input type="text" id="tallage" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="duration">Длительность:</label>
+				<input type="text" id="duration" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="release">Дата выхода:</label>
+				<input type="text" id="release" class="input-adder"/>
+			</form>
+
+			<form class="form-adder">
+				<label for="age">Ограничение по возрасту:</label>
+				<input type="text" id="age" class="input-adder"/>
+			</form>
+		</div>
+			<button onclick="addFilm()" class="adder_btn">Добавить</button>
+			<button type="reset" onclick="closeAdder()" class="adder_btn">Закрыть</button>
+	</div>
+
+	<div id="dropdown-filter" class="dropdown-filter">
+		<button onclick="showFilters()" id="dropbtn" class="dropbtn">Фильтр</button>
+		<div id="dropdown" class="dropdown-content">
+			<div class="FilterBtn-container">
+			<div>
+			<button onclick="filterDate()" id="FilterBtn_Date" class="filterbtn">По дате выхода &#9660;</button>
+			<div id="dropdown-date" class="dropdown-choice">
+				<form>
+					<p><input name="radio-date" type="radio" value="descending">По убыванию</p>
+					<p><input name="radio-date" type="radio" value="ascending">По возрастанию</p>
+				</form>
+			</div>
+			</div> 
+			<div class="test">
+			<button onclick="filterGenre()" id="FilterBtn_Genre" class="filterbtn">Жанр &#9660;</button>
+			<div id="dropdown-genre" class="dropdown-choice">
+				<form>
+					<p><input name="radio-genre"  type="radio" value="drama">Драма</p>
+					<p><input name="radio-genre"  type="radio" value="comedy">Комедия</p>
+					<p><input name="radio-genre"  type="radio" value="thriller">Боевик</p>
+					<p><input name="radio-genre"  type="radio" value="fantasy">Фэнтези</p>
+					<p><input name="radio-genre"  type="radio" value="cartoon">Мультфильм</p>
+					<p><input name="radio-genre"  type="radio" value="documentary">Документальный</p>
+				</form>				
+			</div>
+			</div>
+			<div>
+			<button onclick="filterCountry()" id="FilterBtn_Country" class="filterbtn">Страна &#9660;</button>
+			<div id="dropdown-country" class="dropdown-choice">
+				<form>
+					<p><input name="radio-country" type="radio" value="russia">Россия</p>
+					<p><input name="radio-country" type="radio" value="usa">США</p>
+					<p><input name="radio-country" type="radio" value="uk">Великобритания</p>
+					<p><input name="radio-country" type="radio" value="italy">Италия</p>
+					<p><input name="radio-country" type="radio" value="japan">Япония</p>
+				</form>
+			</div>
+			</div>
+			<button onclick="confirmFilters()" id="confirmdropbtn" class="Acceptdropbtn">Применить</button>
+			<button onclick="cancelFilters()" id="canceldropbtn" class="Canceldropbtn">Отменить</button>
+			</div>
+			<!-- <form>
+				Дата выхода:
+				<select>
+					<option>По возрастанию</option>
+					<option>По убыванию</option>
+				</select>
+			</form>
+			<form>
+				Жанр:
+				<select multiple>
+					<option>Драма</option>
+					<option>Комедия</option>
+					<option>Боевик</option>
+					<option>Фентези</option>
+					<option>Мультфильм</option>
+					<option>Документальный</option>
+				</select>
+			</form>
+			<form>
+				Страна:
+				<select multiple>
+					<option>Россия</option>
+					<option>США</option>
+					<option>Италия</option>
+					<option>Великобритания</option>
+					<option>Франция</option>
+					<option>Япония</option>
+				</select>
+			</form> -->
+		</div>
+	</div>
 	<div id="films"></div>
 	<div id="filmography"></div>
 	<div id="popup" class="popup">
@@ -45,16 +202,16 @@
 				<span class="popup_header_text">Авторизация</span>
 			</div>
 			<div class="popup_body">
-			<form>
-				<p>Введите ваш ник:</p>
-				<input type="text" class="popup_text" id="popup_text_nickname">
-			</form>
-			<form>
-				<p>Введите ваш род деятельности:</p>
-				<input type="text" class="popup_text" id="popup_text_prof">
-			</form>	
-			<br>		
-			<input type="button" value="Авторизоваться" class="popup-button" onclick="authorize()">
+				<form>
+					<p>Введите ваш ник:</p>
+					<input type="text" class="popup_text" id="popup_text_nickname">
+				</form>
+				<form>
+					<p>Введите ваш род деятельности:</p>
+					<input type="text" class="popup_text" id="popup_text_prof">
+				</form>
+				<br>
+				<input type="button" value="Авторизоваться" class="popup-button" onclick="authorize()">
 			</div>
 		</div>
 	</div>
@@ -63,6 +220,7 @@
 	<script src="constants/root.js"></script>
 	<script src="utils/localStorageUtil.js"></script>
 	<!-- Фильмы -->
+	<script src="films/Film.js"></script>
 	<script src="films/films.js"></script>
 	<link rel="stylesheet" type="text/css" href="films/fillms.css">
 	<!-- Header -->
@@ -71,7 +229,10 @@
 	<!-- Filmography -->
 	<script src="filmography/filmography.js"></script>
 	<link rel="stylesheet" type="text/css" href="filmography/filmography.css">
-	
+	<!-- Filters -->
+	<script src="Filter/filter.js"></script>
+	<link rel="stylesheet" type="text/css" href="Filter/filter.css">
 
 </body>
+
 </html>

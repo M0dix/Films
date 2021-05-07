@@ -1,0 +1,123 @@
+.dropdown-filter {
+	position: relative;
+    display: inline-block;
+	min-height: 50px;
+	width: 95%;
+}
+
+.dropbtn {
+	height: 40px;
+	position: absolute;
+	right: 0;
+    background-color: #3498DB;
+    color: white;
+    padding: 11px 32px; 
+	margin-right: 5%;
+	margin-top: 10px;
+    font:18px Arial, Helvetica, sans-serif; 
+ 	font-weight:bold; 
+ 	color:#E5FFFF; 
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown-content { 
+	display: none;
+}
+
+.dropdown-filter {
+	position: relative;
+    display: inline-block;
+}
+
+.FilterBtn-container {
+	display: flex;
+	justify-content: center;
+}
+
+.filterbtn {
+	text-decoration:none; 
+	text-align:center; 
+	margin: 10px;
+ 	padding:11px 32px; 
+ 	border:none; 
+	cursor: pointer;
+ 	-webkit-border-radius:39px;
+ 	-moz-border-radius:39px; 
+ 	border-radius: 39px; 
+ 	font:18px Arial, Helvetica, sans-serif; 
+ 	font-weight:bold; 
+ 	color:#E5FFFF; 
+ 	background-color:#61d682; 
+ 	background-image: -moz-linear-gradient(top, #61d682 0%, #1982a5 100%); 
+ 	background-image: -webkit-linear-gradient(top, #61d682 0%, #1982a5 100%); 
+ 	background-image: -o-linear-gradient(top, #61d682 0%, #1982a5 100%); 
+ 	background-image: -ms-linear-gradient(top, #61d682 0% ,#1982a5 100%); 
+ 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982a5', endColorstr='#1982a5',GradientType=0 ); 
+ 	background-image: linear-gradient(top, #61d682 0% ,#1982a5 100%);   
+ 	-webkit-box-shadow:0px 0px 2px #bababa;  -moz-box-shadow: 0px 0px 2px #bababa;  box-shadow:0px 0px 2px #bababa; 
+}
+
+.filterbtn:hover {
+	-webkit-border-radius:39px;
+	-moz-border-radius:39px; 
+	border-radius: 39px; 
+	font:18px Arial, Helvetica, sans-serif; 
+	font-weight:bold; 
+	color:#E5FFFF; 
+	background-color:#dbfc35; 
+	background-image: -moz-linear-gradient(top, #dbfc35 0%, #31abd4 100%); 
+	background-image: -webkit-linear-gradient(top, #dbfc35 0%, #31abd4 100%); 
+	background-image: -o-linear-gradient(top, #dbfc35 0%, #31abd4 100%); 
+	background-image: -ms-linear-gradient(top, #dbfc35 0% ,#31abd4 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31abd4', endColorstr='#31abd4',GradientType=0 ); 
+	background-image: linear-gradient(top, #dbfc35 0% ,#31abd4 100%);   
+	-webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+	-moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+	box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+}
+
+.Acceptdropbtn {
+	height: 40px;
+	padding:11px 32px; 
+	margin-left: 5%;
+	margin-top: 10px;
+	font:18px Arial, Helvetica, sans-serif; 
+	font-weight:bold; 
+	color: #E5FFFF;
+	border: none;
+	background-color: #3498DB;
+	cursor: pointer;
+}
+
+.Canceldropbtn {
+	width: 120px;
+	height: 40px;
+	margin-left: 2%;
+	margin-top: 10px;
+	font:18px Arial, Helvetica, sans-serif; 
+	font-weight:bold; 
+	color: #E5FFFF;
+	border: none;
+	background-color: #3498DB;
+	cursor: pointer;
+}
+
+.show {display:block;}
+
+.Acceptdropbtn:hover, .Canceldropbtn:hover {
+    background-color: #2980B9;
+}
+
+.dropdown-choice {
+	display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}

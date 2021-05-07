@@ -1,13 +1,75 @@
 .header-container {
     display: flex;
-    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 60px;
     padding: var(--spacing-small);
     background-color: #003366;
 }
 
+.header-logo {
+    height: 30px;
+}
+
 .header-counter {
+    font-size: 40px;
+	color: white;
     margin-left: auto;
     padding-right: var(--spacing-small);
     font-weight: bold;
     cursor: pointer;
+}
+
+.header-adder {
+    font-size: 40px;
+	color: white;
+    margin-left: auto;
+    padding-right: var(--spacing-small);
+    font-weight: bold;
+
+	text-shadow: 
+		-0   -1px 1px #000000,
+		 0   -1px 1px #000000,
+		-0    1px 1px #000000,
+		 0    1px 1px #000000,
+		-1px -0   1px #000000,
+		 1px -0   1px #000000,
+		-1px  0   1px #000000,
+		 1px  0   1px #000000,
+		-1px -1px 1px #000000,
+		 1px -1px 1px #000000,
+		-1px  1px 1px #000000,
+		 1px  1px 1px #000000,
+		-1px -1px 1px #000000,
+		 1px -1px 1px #000000,
+		-1px  1px 1px #000000,
+		 1px  1px 1px #000000; 
+    cursor: pointer;  
+}
+
+.header-adder:hover, .header-counter:hover {
+	color: #4fd6ff;
+}
+
+.header-name {
+    padding-left: var(--spacing-medium);
+	font-size: 40px;
+	text-shadow: 
+		-0   -1px 1px #000000,
+		 0   -1px 1px #000000,
+		-0    1px 1px #000000,
+		 0    1px 1px #000000,
+		-1px -0   1px #000000,
+		 1px -0   1px #000000,
+		-1px  0   1px #000000,
+		 1px  0   1px #000000,
+		-1px -1px 1px #000000,
+		 1px -1px 1px #000000,
+		-1px  1px 1px #000000,
+		 1px  1px 1px #000000,
+		-1px -1px 1px #000000,
+		 1px -1px 1px #000000,
+		-1px  1px 1px #000000,
+		 1px  1px 1px #000000; 
+    cursor: pointer;     
 }

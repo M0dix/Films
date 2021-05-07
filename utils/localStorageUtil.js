@@ -32,7 +32,6 @@ class LocalStorageUtil {
 
 const localStorageUtil = new LocalStorageUtil();
 
-localStorageUtil.putFilms("1");
-localStorageUtil.putFilms("1");
+
 
 
