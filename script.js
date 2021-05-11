@@ -32,7 +32,6 @@ function authorize(){
 	}
 }
 
-
 function addFilm(){
 	let LIST = {
 		id: document.getElementById("id").value,
@@ -56,26 +55,27 @@ function addFilm(){
 		if (LIST[key] == null || LIST[key] == "") return alert("Вы не заполнили все поля");
 	}
 
-	// for (let i = 0; i < LIST.length; i++) {
-	// 	if(LIST[i] == null || LIST[i] == ""){
-	// 		return alert("Вы ввели не все поля");
-	// 	}
-	// }
-
 	film = new Film(LIST.id, LIST.name, LIST.png, LIST.country, LIST.genre,LIST.director, 
 					LIST.producer, LIST.screenwriter, LIST.operator, LIST.compositor,
 					LIST.budget, LIST.tallage, LIST.duration, LIST.release, LIST.age);
 
-	alert(film.name);
 	localStorage.setItem(`id${LIST.id}`, JSON.stringify(film));
 	
 	filmsPage.render();
 	closeAdder();
 }
 
+function deleteFilm(id){
+	localStorage.removeItem(`id${id}`);
+
+	filmsPage.render();
+}
+
 function closeAdder(){
+	document.getElementById("id").value = '';
 	document.getElementById("name").value = '';
 	document.getElementById("genre").value = '';
+	document.getElementById("png").value = '';
 	document.getElementById("country").value = '';
 	document.getElementById("director").value = '';
 	document.getElementById("producer").value = '';

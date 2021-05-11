@@ -13,31 +13,6 @@
 
 <body>
 
-	<!-- <header>
-		<div class="header_section">
-			<div class="header_item logo">
-			<a href="#"><img src="images/logo.png" width="45" height="45"></a>
-			</div>
-			
-			<div class="header_item name">
-			<a href="#">Онлайн-кинотеатр</a>	
-			</div>
-		</div>	
-		<div class="header_section">	
-			<div class="header_item button catalog">
-				<a href="#">Каталог</a>
-			</div>
-			
-			<div class="header_item button addfilm">
-				<a href="#">Добавить фильм</a>
-			</div>
-		</div>
-		<div class="header_item section">
-			<div class="header_item button auth">
-				<a onclick="openPopup()" id="user">Войти</a>
-			</div>			
-		</div>
-	</header> -->
 	<div id="header"></div>
 
 	<div id="film-adder" class="film-adder">
@@ -163,35 +138,6 @@
 			<button onclick="confirmFilters()" id="confirmdropbtn" class="Acceptdropbtn">Применить</button>
 			<button onclick="cancelFilters()" id="canceldropbtn" class="Canceldropbtn">Отменить</button>
 			</div>
-			<!-- <form>
-				Дата выхода:
-				<select>
-					<option>По возрастанию</option>
-					<option>По убыванию</option>
-				</select>
-			</form>
-			<form>
-				Жанр:
-				<select multiple>
-					<option>Драма</option>
-					<option>Комедия</option>
-					<option>Боевик</option>
-					<option>Фентези</option>
-					<option>Мультфильм</option>
-					<option>Документальный</option>
-				</select>
-			</form>
-			<form>
-				Страна:
-				<select multiple>
-					<option>Россия</option>
-					<option>США</option>
-					<option>Италия</option>
-					<option>Великобритания</option>
-					<option>Франция</option>
-					<option>Япония</option>
-				</select>
-			</form> -->
 		</div>
 	</div>
 	<div id="films"></div>
@@ -220,18 +166,22 @@
 	<script src="constants/root.js"></script>
 	<script src="utils/localStorageUtil.js"></script>
 	<!-- Фильмы -->
-	<script src="films/Film.js"></script>
-	<script src="films/films.js"></script>
-	<link rel="stylesheet" type="text/css" href="films/fillms.css">
+	<script src="../films/Film.js"></script>
+	<script src="../films/films.js"></script>
+	<link rel="stylesheet" type="text/css" href="../films/fillms.css">
 	<!-- Header -->
-	<script src="Header/Header.js"></script>
-	<link rel="stylesheet" type="text/css" href="Header/Header.css">
+	<script src="../Header/Header.js"></script>
+	<link rel="stylesheet" type="text/css" href="../Header/Header.css">
 	<!-- Filmography -->
-	<script src="filmography/filmography.js"></script>
-	<link rel="stylesheet" type="text/css" href="filmography/filmography.css">
+	<script src="../filmography/filmography.js"></script>
+	<link rel="stylesheet" type="text/css" href="../filmography/filmography.css">
 	<!-- Filters -->
-	<script src="Filter/filter.js"></script>
-	<link rel="stylesheet" type="text/css" href="Filter/filter.css">
+	<script src="../Filter/filter.js"></script>
+	<link rel="stylesheet" type="text/css" href="../Filter/filter.css">
+	<!-- Comments -->
+	<script src="../comment/comment.js"></script>
+	<script src="../comment/CommentClass.js"></script>
+	<link rel="stylesheet" type="text/css" href="../comment/comment.css">
 
 </body>
 

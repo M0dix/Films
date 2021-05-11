@@ -43,7 +43,7 @@
     height: 25px;
     top: 20px;
     right: 20px;
-    background-image: url(cancel.svg);
+    background-image: url(../images/cancel.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;

@@ -95,9 +95,7 @@ function confirmFilters() {
 		let activetext = '';
 
 		if (date != null) {
-			alert(date=="desc");
 			if (date == "desc") {
-				alert("poshlo");
 				filmsmassiv.sort(function(a, b) {
 
 					datearr1 = a.release.split(".");
@@ -193,49 +191,109 @@ function confirmFilters() {
 			}
 
 			htmlCatalog += `
+			<div>
+				<table class="films_element ${obj.id}" >
+				<tr>
+					<td rowspan="3" align="center">
+						<img class="films-element__img" src="${obj.png}"/>
+					</td>
+					<td colspan="2" align="center">
+						<span class="films-element__name">${obj.name}</span>
+					</td>
+					<td>
+						<div class="film__delete" onclick="deleteFilm(${obj.id});"></div>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<span class="films-element__age">${obj.age}</span>
+						
+						<span class="films-element__country">${obj.country}</span>
+	
+						<p>Жанр: <span class="films-element__genre">${obj.genre}</span></p>
+	
+						<p>Режиссёр: <span class="films-element__director">${obj.director}</span></p>
+	
+						<p>Продюсер: <span class="films-element__producer">${obj.producer}</span></p>
+	
+						<p>Сценарист: <span class="films-element__screenwriter">${obj.screenwriter}</span></p>
+	
+						<p>Оператор:<span class="films-element__operator">${obj.operator}</span></p>
+	
+						<p>Композитор: <span class="films-element__compositor">${obj.compositor}</span></p>
+	
+					</td>
+					<td>
+						<p>Бюджет: <span class="films-element__budget">${obj.budget.toLocaleString('ru-RU')}<img src="images/dollarsymbol.png"/></span></p>
+	
+						<p>Мировые сборы: <span class="films-element__tallage">${obj.tallage}<img src="images/dollarsymbol.png"/></span></p>
+	
+						<p>Длительность: <span class="films-element__duration">${obj.duration}</span></p>
+	
+						<p>Дата выхода: <span class="films-element__release">${obj.release}</span></p>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2"> 
+						<button class="films-element__btn ]${activeclass}" onclick="filmsPage.handleSetLocationStorage(this, '${obj.id}')">${activetext}</button>
+						<button class="films-element__btn" id = "film-element__btn-showcomments_${obj.id}" onclick="commentShow('${obj.id}')">Посмотреть отзывы</button>
+					</td>
+				</tr>
+				</table>
 
-			<table class="films_element" >
-			<tr>
-				<td rowspan="3" width="30%" align="center">
-					<img class="films-element__img" src="${obj.png}"/>
-				</td>
-				<td colspan="2" align="center">
-					<span class="films-element__name">${obj.name}</span>
-				</td>
-			</tr>
-			<tr>
-				<td rowspan="2">
-					<span class="films-element__age">${obj.age}</span>
-					
-					<span class="films-element__country">${obj.country}</span>
+				<div class = "comment-element" id = "comment-element_${obj.id}">
+					<div class = "comments-container" id="comments-container${obj.id}">
 
-					<p>Жанр: <span class="films-element__genre">${obj.genre}</span></p>
+					</div>
 
-					<p>Режиссёр: <span class="films-element__director">${obj.director}</span></p>
+					<div class = "comment-form" id = "comment-form${obj.id}">
 
-					<p>Продюсер: <span class="films-element__producer">${obj.producer}</span></p>
+						<form>
+						<fieldset>
+						
+						<legend>Напишите ваш отзыв:</legend>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="textinput">Ваше имя:</label>  
+							<div class="col-md-4">
+								<input id="commentinput_name_id${obj.id}" name="textinput" type="text" class="form-control input-md">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="textinput">Ваш род занятий:</label>  
+							<div class="col-md-4">
+								<input id="commentinput_occupation_id${obj.id}" name="textinput" type="text" class="form-control input-md">									
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="textarea">Ваш отзыв:</label>
+							<div class="col-md-4">                     
+								<textarea class="form-control_textarea" id="commentinput_text_id${obj.id}" name="textarea"></textarea>
+							</div>
+						</div>
+						<span>Ваша оценка:</span>
+						<div class="rating-area" id="commentinput_rating_id${obj.id}">
+							<input type="radio" id="star-5_id${obj.id}" name="rating_id${obj.id}" value="5">
+							<label for="star-5_id${obj.id}" title="Оценка «5»"></label>	
+							<input type="radio" id="star-4_id${obj.id}" name="rating_id${obj.id}" value="4">
+							<label for="star-4_id${obj.id}" title="Оценка «4»"></label>
+							<input type="radio" id="star-3_id${obj.id}" name="rating_id${obj.id}" value="3">
+							<label for="star-3_id${obj.id}" title="Оценка «3»"></label>
+							<input type="radio" id="star-2_id${obj.id}" name="rating_id${obj.id}" value="2">
+							<label for="star-2_id${obj.id}" title="Оценка «2»"></label>
+							<input type="radio" id="star-1_id${obj.id}" name="rating_id${obj.id}" value="1">
+							<label for="star-1_id${obj.id}" title="Оценка «1»"></label>
+						</div>
 
-					<p>Сценарист: <span class="films-element__screenwriter">${obj.screenwriter}</span></p>
-
-					<p>Оператор:<span class="films-element__operator">${obj.operator}</span></p>
-
-					<p>Композитор: <span class="films-element__compositor">${obj.compositor}</span></p>
-
-				</td>
-				<td>
-					<p>Бюджет: <span class="films-element__budget">${obj.budget.toLocaleString('ru-RU')}<img src="images/dollarsymbol.png"/></span></p>
-
-					<p>Мировые сборы: <span class="films-element__tallage">${obj.tallage}<img src="images/dollarsymbol.png"/></span></p>
-
-					<p>Длительность: <span class="films-element__duration">${obj.duration}</span></p>
-
-					<p>Дата выхода: <span class="films-element__release">${obj.release}</span></p>
-				</td>
-			</tr>
-			<tr>
-				<td><button class="films-element__btn ]${activeclass}" onclick="filmsPage.handleSetLocationStorage(this, '${obj.id}')">${activetext}</button></td>
-			</tr>
-			</table>			
+						<button type="button" class="commentAddBtn" onclick="addComment(${obj.id})">Добавить отзыв</button>
+						
+						</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
 			`;
 		} 
         const html = `
